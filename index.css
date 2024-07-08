@@ -1,0 +1,31 @@
+:root {
+    --mainBlack: #151515;
+    --mainGreen: #4EE1A0;
+    --mainGrey: #242424;
+    --mainLightGrey: #D9D9D9;
+    --mainWhite: #FFFFFF;
+
+/*--------------Heading XL-----------------------*/
+    --XlHeading-Font-Size: 88px;
+    --XlHeading-Line-Height: 88px;
+    --XlHeading-Font-Weight: 'Space Grotesk Bold'
+    --XlHeading-Char-Spacing: -2.5px
+
+/*--------------Heading L------------------------*/
+    --LHeading-Font-Size: 48px;
+    --LHeading-Line-Height: 56px;
+    --LHeading-Font-Weight: 'Space Grotesk Bold'
+    --LHeading-Char-Spacing: -1.5px
+
+/*--------------Heading M------------------------*/
+    --MHeading-Font-Size: 24px;
+    --MHeading-Line-Height: 32px;
+    --MHeading-Font-Weight: 'Space Grotesk Bold';
+
+/*--------------Paragraph L----------------------*/
+    --LParagraph-Font-Size: 18px;
+    --LParagraph-Line-Height: 28px;
+    --LParagraph-Font-Weight: 'Space Grotesk Regular';
+
+/*--------------Paragraph M----------------------*/
+}
