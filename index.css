@@ -29,3 +29,34 @@
 
 /*--------------Paragraph M----------------------*/
 }
+
+@font-face {
+    font-family: 'Space Grotesk';
+    src: url(./assets/fonts/SpaceGrotesk-VariableFont_wght.ttf);
+}
+
+body {
+    background-color: var(--mainBlack);
+    font-family: 'Space Grotesk';
+}
+
+.navigation h3 {
+    font-size: var(--MHeading-Font-Size);
+    color: var(--mainWhite);
+    font-family: 'Space Grotesk';
+    font-weight: Bold;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+}
+
+img[alt] {
+    padding: 0 5px 0 5px;
+}
+
+.greeting {
+    color: var(--mainWhite)
+
+}
