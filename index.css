@@ -25,7 +25,7 @@
 /*--------------Paragraph L----------------------*/
     --LParagraph-Font-Size: 18px;
     --LParagraph-Line-Height: 28px;
-    --LParagraph-Font-Weight: 'Space Grotesk Regular';
+    --LParagraph-Font-Weight: 'Space Grotesk Medium';
 
 /*--------------Paragraph M----------------------*/
 }
@@ -37,7 +37,12 @@
 
 body {
     background-color: var(--mainBlack);
+    background-image: url();
     font-family: 'Space Grotesk';
+}
+
+main {
+    margin: 0 16% 0 16%;
 }
 
 .navigation h3 {
@@ -53,10 +58,69 @@ body {
 }
 
 img[alt] {
-    padding: 0 5px 0 5px;
+    padding: 0 15px 0 15px;
 }
 
 .greeting {
-    color: var(--mainWhite)
-
+    display: flex;
+    justify-content: space-between;
+    color: var(--mainWhite);
+    height: 720px;
 }
+
+.greeting h1 {
+    font-size: var(--XlHeading-Font-Size);
+    line-height: var(--XlHeading-Line-Height);
+    letter-spacing: var(--XlHeading-Char-Spacing);
+}
+
+.greeting p {
+    font-size: var(--LParagraph-Font-Size);
+    line-height: var(--LParagraph-Line-Height);
+    letter-spacing: var(--LParagraph-Char-Spacing);
+    color: var(--mainLightGrey);
+}
+
+.greeting a {
+    position: relative;
+    top: 30px;
+    text-decoration: underline;
+    text-decoration-color: var(--mainGreen);
+    text-underline-offset: 10px;
+    color: var(--mainWhite);
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.profile-img {
+    position: absolute;
+    right: 16%;
+    top: 1px;
+    width: 445px;
+    height: 720px;
+    z-index: -1;
+}
+
+.name {
+    text-decoration: underline;
+    text-decoration-color: #4EE1A0;
+    text-underline-offset: 20px;
+}
+
+.skills {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-top: 20px;
+}
+
+.skills h2 {
+    color: var(--mainWhite);
+    font-size: 48px;
+}
+
+.skills p{
+    color: var(--mainWhite)
+}
+
+
