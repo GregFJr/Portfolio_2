@@ -42,7 +42,7 @@ body {
 }
 
 main {
-    margin: 0 16% 0 16%;
+    margin: 0 17% 0 17%;
 }
 
 .navigation h3 {
@@ -57,7 +57,7 @@ main {
     justify-content: space-between;
 }
 
-img[alt] {
+.navigation img[alt] {
     padding: 0 15px 0 15px;
 }
 
@@ -123,4 +123,22 @@ img[alt] {
     color: var(--mainWhite)
 }
 
+.project-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+}
 
+.projects h1 {
+    color: var(--mainWhite);
+    font-size: var(--XlHeading-Font-Size);
+}
+
+.projects img {
+    width: 540px;
+    height: 400px
+}
+
+.projects p {
+    color: var(--mainWhite);
+    text-transform: uppercase;
+}
