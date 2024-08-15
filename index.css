@@ -157,7 +157,7 @@ main {
 
 .contact {
     background-color: var(--mainGrey);
-    height: 30vh;
+    height: 40vh;
 }
 
 .contact-container {
@@ -246,6 +246,11 @@ form textarea {
 
     .projects h1 {
         font-size: 24px;
+    }
+
+    .contact-container {
+        display: flex;
+        flex-direction: column;
     }
 
 }
