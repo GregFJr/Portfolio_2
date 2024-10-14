@@ -21,17 +21,17 @@
       <section class="greeting">
         <div>
           <h1>
-            Nice to meet you! <br />
-            I'm <span class="name">Adam Keyes</span>
+            Nice to meet you!
+            I'm <span class="name">Adam Keyes</span>.
           </h1>
 
           <p>
-            Based in the UK, I’m a front-end developer <br />
-            passionate about building accessible web apps <br />
+            Based in the UK, I’m a front-end developer
+            passionate about building accessible web apps
             that users love.
           </p>
 
-          <a href="#" class="button">Contact Me</a>
+         <button class="btn">Contact Me</button> 
         </div>
         <div class="img-container">
           <img
@@ -41,9 +41,9 @@
           />
         </div>
       </section>
-
+      
       <hr />
-
+      
       <section class="skills">
         <div>
           <h2>HTML</h2>
@@ -77,32 +77,38 @@
           <div class="grid-img">
             <img src="./assets/images/thumbnail-project-1-large.webp" alt="" />
             <p>Design Portfolio</p>
-            <p>HTML CSS</p>
+           <div class="tech"><span>html</span> <span>css</span></div> 
+           <div class="img-overlay"><span id="spa"><a href="">View Project</a> <a href="">View Code</a></span> </div>
           </div>
           <div class="grid-img">
             <img src="./assets/images/thumbnail-project-2-large.webp" alt="" />
             <p>E-Learning landing Page</p>
-            <p>Html Css</p>
+            <div class="tech"><span>html</span> <span>css</span></div> 
+            <div class="img-overlay"><span id="spa"><a href="">View Project</a> <a href="">View Code</a></span> </div>
           </div>
           <div class="grid-img">
             <img src="./assets/images/thumbnail-project-3-large.webp" alt="" />
             <p>Todo Web App</p>
-            <p>Html css Javascript</p>
+          <div class="tech"><span>html</span> <span>css</span> <span>javascript</span></div> 
+          <div class="img-overlay"><span id="spa"><a href="">View Project</a> <a href="">View Code</a></span> </div>
           </div>
           <div class="grid-img">
             <img src="./assets/images/thumbnail-project-4-large.webp" alt="" />
             <p>Entertainment Web App</p>
-            <p>Html Css Javascript</p>
+            <div class="tech"><span>html</span> <span>css</span> <span>javascript</span></div> 
+            <div class="img-overlay"><span id="spa"><a href="">View Project</a> <a href="">View Code</a></span> </div>
           </div>
           <div class="grid-img">
             <img src="./assets/images/thumbnail-project-5-large.webp" alt="" />
             <p>Memory Game</p>
-            <p>Html Css Javascript</p>
+            <div class="tech"><span>html</span> <span>css</span> <span>javascript</span></div> 
+            <div class="img-overlay"><span id="spa"><a href="">View Project</a> <a href="">View Code</a></span> </div>
           </div>
           <div class="grid-img">
             <img src="./assets/images/thumbnail-project-6-large.webp" alt="" />
             <p>Art Gallery Showcase</p>
-            <p>Html Css Javascript</p>
+            <div class="tech"><span>html</span> <span>css</span> <span>javascript</span></div> 
+            <div class="img-overlay"><span id="spa"><a href="">View Project</a> <a href="">View Code</a></span> </div>
           </div>
         </div>
       </section>
@@ -113,22 +119,24 @@
         <div class="contact-info">
           <h1>Contact</h1>
           <p>
-            I would love to hear about your project and how I <br />
-            could help. Please fill in the form, and I’ll get back <br />
+            I would love to hear about your project and how I
+            could help. Please fill in the form, and I’ll get back 
             to you as soon as possible.
           </p>
         </div>
 
         <div class="contact-form">
-          <form>
-            <input type="text" placeholder="Name" required />
-            <input type="email" placeholder="Email" required />
-            <textarea name="message" placeholder="Message" required></textarea>
-            <button type="submit">Submit</button>
+          <form id="myform">
+            <input type="text" placeholder="Name" id="name" />
+            <span id="name-error" class="name-error"></span>
+            <input type="email" placeholder="Email" id="email"/>
+            <span id="email-error" class="email-error"></span>
+            <textarea name="message" placeholder="Message"></textarea>
+            <span><button type="submit" id="submit">Send message</button></span> 
           </form>
         </div>
       </div>
     </section>
-    <script src="index.js"></script>
+    <script src="./index.js"></script>
   </body>
 </html>

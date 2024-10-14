@@ -44,7 +44,7 @@ body {
 }
 
 main {
-    margin: 0 17% 0 17%;
+    padding: 0 5%;
 }
 
 .navigation h3 {
@@ -74,6 +74,7 @@ main {
     font-size: var(--XlHeading-Font-Size);
     line-height: var(--XlHeading-Line-Height);
     letter-spacing: var(--XlHeading-Char-Spacing);
+    inline-size: 800px;
 }
 
 .greeting p {
@@ -81,6 +82,7 @@ main {
     line-height: var(--LParagraph-Line-Height);
     letter-spacing: var(--LParagraph-Char-Spacing);
     color: var(--mainLightGrey);
+    inline-size: 400px;
 }
 
 .greeting a {
@@ -93,6 +95,19 @@ main {
     font-weight: bold;
     letter-spacing: 1.5px;
     text-transform: uppercase;
+}
+
+.greeting .btn {
+    background: none;
+    border: none;
+    color: var(--mainWhite);
+    letter-spacing: 1px;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-top: 20px;
+    text-decoration: underline var(--mainGreen);
+    text-underline-offset: 10px;
+    padding: 10px 10px 10px 10px;
 }
 
 .profile-img {
@@ -118,7 +133,12 @@ main {
 .skills {
     display: grid;
     grid-template-columns: auto auto auto;
+    place-items: center;
     margin-top: 20px;
+}
+
+.skills div {
+    width: 100%;
 }
 
 .skills h2 {
@@ -133,6 +153,7 @@ main {
 .project-grid {
     display: grid;
     grid-template-columns: auto auto;
+    place-items: center;
 }
 
 .projects h1 {
@@ -141,13 +162,46 @@ main {
 }
 
 .projects img {
-    width: 540px;
-    height: 400px
+    position: relative;
+    width: 100%;
+    height: 400px;
 }
 
-.projects p {
+.projects img:hover {
+    cursor: pointer;
+    transform: scale(1.01);
+    transition: 0.5s;
+    /* filter: brightness(30%); */
+}
+
+.grid-img:nth-last-of-type(even) {
+    padding-right: 10px;
+}
+
+.grid-img{
+    position: relative;
+    width: auto;
+}
+
+.grid-img span {
     color: var(--mainWhite);
     text-transform: uppercase;
+    text-decoration: underline var(--mainGreen);
+    text-underline-offset: 5px;
+}
+
+.grid-img .tech {
+    display: flex;
+    padding-bottom: 10px;
+    gap: 15px;
+}
+
+
+.grid-img p {
+    color: var(--mainWhite);
+    text-transform: uppercase;
+    position: relative;
+    top: 0;
 }
 
 .projects p:nth-of-type(even) {
@@ -155,27 +209,88 @@ main {
     color: var(--mainLightGrey);
 }
 
+.img-overlay span {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: #151515c2;
+    transition: 0.3s ease-in;
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+.img-overlay a {
+    text-decoration: none;
+    color: var(--mainWhite);
+}
+
+.img-overlay  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 85%;
+    top: 0;
+    left: 0;
+    gap: 20px;
+    color: var(--mainWhite);
+    font-size: 18px;
+}
+
+.img-overlay:hover > span {
+    display: flex;
+    cursor: pointer;
+}
+
+
+
 .contact {
+    display: flex;
+    justify-content: center;
     background-color: var(--mainGrey);
-    height: 40vh;
+    height: 100%;
+    width: 100%;
+}
+
+.contact-info {
+    width: 100%;
+}
+
+.contact-form {
+    width: 100%;
+}
+
+.contact p {
+    font-size: 12px;
 }
 
 .contact-container {
     display: flex;
-    justify-content: space-between;
-    margin: 0 17% 0 17%;
     color: var(--mainWhite);
+    width: 100%;
+    padding: 2% 10% 5% 10%;
 }
+
+hr {
+    margin-top: 55px;
+}
+
 
 form {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 form input {
-    width: 400px;
+    width: 100%;
     height: 50px;
     border: none;
+    color: var(--mainWhite);
     border-bottom: 2px solid var(--mainGreen);
     margin-bottom: 20px;
     background: none;
@@ -184,80 +299,41 @@ form input {
 form textarea {
     background: none;
     border: none;
+    width: 100%;
 }
 
-@media screen and (max-width: 599px) {
+form button {
+background: none;
+color: #FFFFFF;
+letter-spacing: 2px;
+text-transform: uppercase;
+border: none;
+font-size: 18px;
+}
 
-    body {
-        overflow-x: hidden;
-    }
+form button:hover {
+    cursor: pointer;
+} 
 
-    main {
-        display: flex;
-        flex-direction: column;
-        margin: 0 auto;
-    }
+.name-error{
+    border-color: rgba(255, 0, 0, 0.641);
+    margin-bottom: 2px;
+}
 
-    .navigation {
-        flex-direction: column;
-        text-align: center;
-        margin-bottom: 20px;
-    }
+.email-error {
+    border-color: rgba(255, 0, 0, 0.641);
+    margin-bottom: 2px;
+}
 
-    .img-container {
-        position: relative;
-        top: 3%;
-        width: 230px;
-        right: 0;
-        left: 0;
-
-    }
-
-    .greeting {
-        display: flex;
-        flex-direction: column-reverse;
-        text-align: center;
-        align-items: center;
-    }
-
-    .greeting h1 {
-        font-size: 48px;
-        line-height: var(--LHeading-Line-Height);
-    }
-
-    .skills {
-        grid-template-columns: auto;
-        text-align: center;
-    }
-    
-    .project-grid {
-        grid-template-columns: auto;
-
-    }
-
-    .grid-img img {
-        width: 100%;
-        height: auto;
-    }
-
-    .projects {
-        padding: 0 3% 0 3%;
-    }
-
-    .projects h1 {
-        font-size: 24px;
-    }
-
-    .contact-container {
-        display: flex;
-        flex-direction: column;
-    }
+#email-error, #name-error {
+    display: flex;
+    color: rgba(255, 0, 0, 0.641);
+    justify-content: flex-end;
 
 }
 
-@media screen and (min-width: 768px) and (max-width: 1023px)  {
+@media screen and (max-width: 1044px)  {
     .skills {
-        display: grid;
         grid-template-columns: auto auto;
     }
 
@@ -274,12 +350,136 @@ form textarea {
         margin: 0 10px 0 10px;
     }
 
-    main {
-        margin: 0 2%;
-    }
-
     .img-container {
         right: 0;
     }
 
+    .contact-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    form {
+        display: flex;
+        align-items: center;
+    }
+
+    form button {
+        margin-top: 20px;
+        text-decoration: underline var(--mainGreen);
+        text-underline-offset: 10px;
+        padding: 10px 10px 10px 10px;
+    }
+
+    .greeting h1 {
+
+        inline-size: 550px;
+    }
+
+    .contact {
+        display: flex;
+        justify-content: center;
+    }
+
 }
+
+@media screen and (max-width: 844px) {
+    main {
+        padding: 0 10%;
+    }
+    .navigation {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .img-container {
+        position: relative;
+        top: 1%;
+        width: 230px;
+        right: 0;
+        left: 0;
+    }
+
+    .skills div {
+        width: 100%;
+    }
+
+    .skills h2 {
+        font-size: 32px;
+    }
+
+    .skills {
+        display: grid;
+        grid-template-columns: auto;
+        text-align: center;
+    }
+    
+    .greeting {
+        display: flex;
+        flex-direction: column-reverse;
+        text-align: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .greeting h1 {
+        font-size: 35px;
+        inline-size: auto;
+        line-height: 40px;
+        width: 100%;
+    }
+
+    .greeting p {
+        width: 100%;
+        inline-size: auto;
+        font-size: 16px;
+    }
+
+    .greeting div {
+        display: flex;
+        flex-direction: column;
+        gap: 10px
+    }
+    
+    .project-grid {
+        display: grid;
+        grid-template-columns: auto;
+    }
+
+    .grid-img {
+        margin: 0;
+        padding-right: 0;
+    }
+
+    .grid-img:nth-last-of-type(even) {
+        padding-right:0 ;
+    }
+
+    .grid-img img {
+        height: auto;
+        width: 100%;
+    }
+
+    .projects h1 {
+        font-size: 24px;
+    }
+
+    .contact {
+       display: flex;
+       justify-content: center;
+    }
+
+    .contact button {
+        font-size: 14px;
+        margin-top: 5px;
+        margin-bottom: 15px;
+    }
+
+    .contact-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
